@@ -65,7 +65,7 @@ class Protocol(p2protocol.Protocol):
 
     message_inv = pack.ComposedType([
         ('invs', pack.ListType(pack.ComposedType([
-            ('type', pack.EnumType(pack.IntType(32), {1: 'tx', 2: 'block', 3: 'filtered_block', 4: 'txlock_request', 5: 'txlock_vote', 6: 'spork', 7: 'goldmine_winner', 8: 'goldmine_scanning_error', 9: 'budget_vote', 10: 'budget_proposal', 11: 'budget_finalized', 12: 'budget_finalized_vote', 13: 'goldmine_quorum', 14: 'goldmine_announce', 15: 'goldmine_ping'})),
+            ('type', pack.EnumType(pack.IntType(32), {1: 'tx', 2: 'block', 3: 'filtered_block', 4: 'txlock_request', 5: 'txlock_vote', 6: 'spork', 7: 'eternitynode_winner', 8: 'eternitynode_scanning_error', 9: 'evolution_vote', 10: 'evolution_proposal', 11: 'evolution_finalized', 12: 'evolution_finalized_vote', 13: 'eternitynode_quorum', 14: 'eternitynode_announce', 15: 'eternitynode_ping'})),
             ('hash', pack.IntType(256)),
         ]))),
     ])
